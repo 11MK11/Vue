@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <page-header :title="title" :desc="desc"></page-header>
+    <main :class="{dark: isDark}">
+      <button @Click="switchMode">{{ isDark ? "light" : "dark" }}</button>
+      <page-section title="this is title" desc="this is desc"></page-section>
+      <section class="section">
+        <h3 class="section-heading">The count is {{count}}</h3>
+        <a class="section-link" @click="incCount">Increase</a>
+        <a class="section-link" @click="decCount">Decrease</a>
+      </section>
+      <page-section
+        v-for="section in sections"
+        :title="section.title"
+        :desc="section.desc"
+        :key="section.id"
+      >
+      </page-section>
+      <section class="section">
+        <h3 class="section-heading">Do you like it?</h3>
+        <a class="section-link" :href="link.url" target="_blank"
+          >{{link.name}}</a
+        >
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

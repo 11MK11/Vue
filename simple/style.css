@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h3,
+p {
+  margin-bottom: 1rem;
+}
+
+.dark {
+  background: #333;
+  color: #fff;
+}
+
+.header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  margin: 0;
+  text-align: center;
+}
+
+.section {
+  padding: 1rem;
+  margin: 1rem;
+  border-bottom: 1px solid #000;
+}
+
+.section-link {
+  text-decoration: none;
+  background: lightblue;
+  color: #000;
+  padding: 0.2rem;
+  margin: 0 1rem;
+}
+
+.section-link:hover {
+  padding: 0.4rem;
+}
