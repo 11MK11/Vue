@@ -1,10 +1,12 @@
 <template>
   <page-header title="My quotes" text="welcome to our website"></page-header>
   <div class="quotes">
-    <single-quote
-  v-for="(quote, index) in quotes"
-  :key="index"
-  :text="quote.quoteText"/>
+  <single-quote
+    v-for="quote in quotes"
+    :text="quote.quoteText"
+    :key="quote.quoteText"
+  />
+
   </div>
 </template>
 
@@ -12,14 +14,13 @@
 import PageHeader from './components/PageHeader.vue';
 import SingleQuote from './components/SingleQuote.vue';
 import quotes from '../quotes.json';
-console.log(quotes);
 export default {
   name: 'App',
   components: {
     PageHeader,
     SingleQuote,
   },
-  data() {
+  setup() {
     return {
       quotes,
     };
